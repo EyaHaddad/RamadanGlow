@@ -15,12 +15,33 @@ export default function Ramadan() {
       <Lantern size="md" className="left-[20%] -top-5 hidden lg:block" delay={1.2} />
       <Lantern size="sm" className="right-[15%] top-10 md:hidden" delay={0.8} />
 
+      {/* From Header - Top of page */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="fixed top-0 left-0 right-0 z-20 py-4 px-6"
+      >
+        <div className="flex items-center justify-center gap-3">
+          <div className="h-px w-12 bg-gradient-to-r from-transparent to-[#FFD700]/60" />
+          <motion.span 
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, delay: 0.3 }}
+            className="text-xl md:text-2xl text-[#FFD700] font-messiri tracking-wider"
+          >
+            ✨ من آية ✨
+          </motion.span>
+          <div className="h-px w-12 bg-gradient-to-l from-transparent to-[#FFD700]/60" />
+        </div>
+      </motion.div>
+
       {/* Main Content Container */}
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
-        className="relative z-10 max-w-2xl w-full text-center space-y-12"
+        className="relative z-10 max-w-2xl w-full text-center space-y-12 mt-8"
       >
         {/* Header Section */}
         <div className="space-y-4">
@@ -86,12 +107,18 @@ export default function Ramadan() {
 
         {/* Signature */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 2.5 }}
-          className="text-lg md:text-xl text-[#FFD700]/80 font-messiri pt-8"
+          className="pt-8 flex flex-col items-center gap-3"
         >
-          من آية ✨
+          <div className="h-px w-32 bg-gradient-to-r from-transparent via-[#FFD700]/50 to-transparent" />
+          <span className="text-2xl md:text-3xl text-[#FFD700] font-messiri font-bold tracking-wide">
+            آية ✨
+          </span>
+          <p className="text-sm text-white/50 font-cairo">
+            بكل حب وامتنان
+          </p>
         </motion.div>
       </motion.div>
 
