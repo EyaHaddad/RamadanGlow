@@ -82,7 +82,7 @@ export default function Ramadan() {
           transition={{ duration: 1.5, delay: 2.5 }}
           className="text-lg md:text-xl text-[#FFD700]/80 font-messiri pt-8"
         >
-          من إيا ✨
+          من آية ✨
         </motion.div>
       </motion.div>
 
