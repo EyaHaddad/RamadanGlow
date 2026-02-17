@@ -41,6 +41,15 @@ export default function Ramadan() {
           >
             اللهم بلغنا رمضان لا فاقدين ولا مفقودين
           </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5, delay: 1.2 }}
+            className="text-lg md:text-xl text-[#FFD700] font-messiri mt-4 opacity-90"
+          >
+            الخميس 19/02/2026
+          </motion.p>
         </div>
 
         {/* Glass Card Message */}
